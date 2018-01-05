@@ -1,0 +1,35 @@
+<h1>Written Qs</h1>
+<body>
+<% @result.each do |each_result| %>
+<div class="boxed">
+  <b> ID: </b>
+  <%= "#{each_result['_about']}" %>
+  <br/>
+  <b> Answer Date: </b>
+  <%= "#{each_result['AnswerDate']['_value']}"%>
+  <br/>
+  <b> Answering Body: </b>
+  <%= "#{each_result['AnsweringBody'].first['_value']}"%>
+  <br/>
+  <b> Date tabled: </b>
+  <%= "#{each_result['dateTabled']['_value']}" %>
+  <br/>
+  <b> Question Text: </b>
+  <%="#{each_result['questionText']}" %>
+  <br/>
+   <b> Tabling Member link: </b>
+ <%="#{each_result['tablingMember']['_about']}" %>
+   <br/>
+   <b> Tabling Member name: </b>
+  <%="#{each_result['tablingMemberPrinted'].first['_value']}" %>
+    <br/>
+   <b> Title: </b>
+  <%="#{each_result['title']}" %>
+    <br/>
+   <b> UIN: </b>
+  <%="#{each_result['uin']}"%>
+    <br/>
+
+</div>
+<% end %>
+</body>
